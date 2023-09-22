@@ -2,12 +2,15 @@ import React from 'react'
 import './Login.css';
 import Button from "./components/Button";
 import TextField from "./components/TextField";
+import {useState} from "react";
+import {useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLock} from '@fortawesome/free-solid-svg-icons';
-import {useState} from "react";
+
 
 const Login = () => {
   const [body, setBody] = useState({username: '', password: ''});
+  const history = useNavigate();
 
   const handleChange = e => {
     setBody({
@@ -17,6 +20,7 @@ const Login = () => {
   }
 
   const onSubmit = () => {
+    history('/app');
     console.log(body);
   }
 

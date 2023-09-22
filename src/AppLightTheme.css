@@ -1,0 +1,26 @@
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.light-theme .navbar {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.light-theme .navbar-brand {
+    color: #ea3939;
+}
+
+.light-theme .navbar-link {
+    color: #333;
+}
+
+.light-theme button {
+    background-color: #ea3939;
+    color: white;
+}
+
+.light-theme button:hover {
+    background-color: #ff5555;
+}
