@@ -19,10 +19,9 @@
     transition: color 0.3s ease;
 }
 
-/* Efecto de resaltado al pasar el mouse */
 .navbar-brand:hover {
-    color: #ea3939; /* Cambia el color al pasar el mouse */
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    color: #ea3939;
+    transform: scale(1.05);
 }
 
 

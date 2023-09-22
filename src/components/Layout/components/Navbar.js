@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import '../../../css/AppDarkTheme.css';
+import '../../../css/AppLightTheme.css';
 
-const Navbar = () => {
+const Navbar = ({ darkTheme }) => {
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
       <div className="navbar-left">
         <Link to="/" className="navbar-brand">
           Gamor

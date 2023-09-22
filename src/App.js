@@ -4,27 +4,28 @@ import {useState} from "react";
 import Login from './components/Login'
 import Layout from "./components/Layout";
 import './App.css';
+import './css/AppDarkTheme.css';
+import './css/AppLightTheme.css';
 
 const App = () => {
   const [darkTheme, setDarkTheme] = useState(true);
 
+
   const toggleTheme = () => {
-    setDarkTheme(!darkTheme); // Cambia entre temas claro y oscuro
+    setDarkTheme(!darkTheme);
   };
 
   return (
     <Router>
-      <div className={`app ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
-        <button onClick={toggleTheme}>Cambiar Tema</button>
         <Suspense fallback={<p>loading...</p>}>
         <Routes>
-          <Route path="/" element={<div className="login-background">
+          <Route path="/" element={<div className={`login-background ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
             <Login />
           </div>} />
-          <Route path="/app" element={<Layout />} />
+          <Route path="/app" element={<Layout darkTheme={darkTheme} />} />
         </Routes>
       </Suspense>
-     </div>
+      <button onClick={toggleTheme}>Cambiar Tema</button>
     </Router>
   )
 }
