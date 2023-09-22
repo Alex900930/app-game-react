@@ -45,3 +45,12 @@ body {
 .login-form button:hover {
     background-color: #0056b3;
 }
+
+.security-icon {
+    color: #007bff;
+    height: 1.5rem;
+    margin-top: 5px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
