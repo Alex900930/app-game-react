@@ -1,4 +1,4 @@
-/* Navbar container */
+
 .navbar {
     background-color: #1a1a1a;
     color: white;
@@ -9,7 +9,21 @@
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Navbar brand (app title) */
+.navbar img {
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.navbar-left {
+    margin-left: -45rem;
+}
+
+.navbar-left img {
+    width: auto;
+    height: 50px;
+}
+
 .navbar-brand {
     font-size: 24px;
     font-weight: bold;
@@ -24,15 +38,11 @@
     transform: scale(1.05);
 }
 
-
-/* Efecto de resaltado al pasar el mouse */
 .navbar-brand:hover {
-    color: #ea3939; /* Cambia el color al pasar el mouse */
-    text-shadow: 0 0 5px rgba(234, 57, 57, 0.7); /* Agrega una sombra al pasar el mouse */
+    color: #ea3939;
+    text-shadow: 0 0 5px rgba(234, 57, 57, 0.7);
 }
 
-
-/* Navbar links (Inicio, Novedades, Fiesta, Profesional) */
 .navbar-link {
     text-decoration: none;
     color: #fff;
@@ -42,16 +52,14 @@
 }
 
 .navbar-link:hover {
-    color: #ea3939; /* Cambia el color al pasar el mouse */
+    color: #ea3939;
 }
 
-/* Navbar right section (Iniciar Sesión, Crear Cuenta) */
 .navbar-right {
     display: flex;
     align-items: center;
 }
 
-/* Estilo para el hipervínculo "Iniciar Sesión" */
 .navbar-link:last-child {
     background-color: #ea3939;
     padding: 10px 20px;

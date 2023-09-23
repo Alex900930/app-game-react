@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './logo.png';
+import Logo1 from './logo1.png';
+import {useState, useEffect} from "react";
 import './Navbar.css';
 import '../../../css/AppDarkTheme.css';
 import '../../../css/AppLightTheme.css';
 
 const Navbar = ({ darkTheme }) => {
+  const [changeLogo, setChangeLogo] = useState(false);
+  useEffect(() => {
+    setChangeLogo(!darkTheme);
+  }, [darkTheme]);
   return (
     <nav className={`navbar ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
+      <img src={changeLogo ? Logo1 : Logo} alt="logo" className="logo"/>
       <div className="navbar-left">
         <Link to="/app" className="navbar-brand">
           Gamor
