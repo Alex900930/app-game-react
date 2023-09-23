@@ -16,7 +16,9 @@
 }
 
 .navbar-left {
-    margin-left: -45rem;
+    display: flex;
+    align-items: center;
+    margin-right: 800px;
 }
 
 .navbar-left img {
@@ -47,7 +49,7 @@
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 10px;
     transition: color 0.3s ease;
 }
 
@@ -58,6 +60,7 @@
 .navbar-right {
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 .navbar-link:last-child {
@@ -70,4 +73,18 @@
 .navbar-link:last-child:hover {
     background-color: #fff;
     color: #ea3939;
+}
+
+@media (max-width: 1568px) {
+    .navbar-brand {
+        font-size: 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .navbar-link {
+        font-size: 16px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 }
