@@ -8,7 +8,7 @@ const Navbar = ({ darkTheme }) => {
   return (
     <nav className={`navbar ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
       <div className="navbar-left">
-        <Link to="/" className="navbar-brand">
+        <Link to="/app" className="navbar-brand">
           Gamor
         </Link>
         <Link to="/novedades" className="navbar-link">
