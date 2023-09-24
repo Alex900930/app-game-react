@@ -5,13 +5,7 @@ const Card = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://www.freetogame.com/api/games", {
-      method: 'GET',
-      withCredentials: false,
-      crossorigin: true,
-      mode: 'no-cors',
-    })
-      .then(res => res.json())
+    fetch("/api/obtenerDatos")
       .then(data => setData(data))
       .then(response1 => console.log(response1))
       .catch(error => console.log(error));
@@ -22,7 +16,7 @@ const Card = () => {
     <div className="card">
       <h1>Lsita de Video Juegos</h1>
       <ul>
-        {data && data.map((juego) => <li key={juego.id}>{juego.title}</li>)}
+        {/*{data && data.map((juego) => <li key={juego.id}>{juego.title}</li>)}*/}
       </ul>
       <Personaje nombre_personaje={nombre_personaje} caracteristicas={caracteristicas}/>
     </div>
