@@ -8,10 +8,7 @@ const Layout = ({ darkTheme }) => {
   return (
     <div className={`layout-container ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
     <Navbar darkTheme={darkTheme} />
-    <div className="conatiner">
       <Card />
-    </div>
-
     </div>
   )
 }

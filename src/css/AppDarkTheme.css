@@ -36,4 +36,9 @@ body {
     background-color: #ff5555;
 }
 
+.titulocss {
+    color: lightyellow;
+    text-shadow: 0 0 10px gold, 0 0 20px firebrick, 0 0 40px pink, 0 0 80px red;
+}
+
 
