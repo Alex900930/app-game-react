@@ -13,6 +13,14 @@ const App = () => {
 
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
+    const iconElement = document.querySelector('.custom-icon');
+    if (darkTheme) {
+      iconElement.classList.remove('bi-sun-fill');
+      iconElement.classList.add('bi-moon-fill');
+    } else {
+      iconElement.classList.remove('bi-moon-fill');
+      iconElement.classList.add('bi-sun-fill');
+    }
   };
 
   return (
@@ -22,10 +30,9 @@ const App = () => {
           <Route path="/" element={<div className={`login-background ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
             <Login />
           </div>} />
-          <Route path="/app" element={<Layout darkTheme={darkTheme} />} />
+          <Route path="/app" element={<Layout darkTheme={darkTheme} toggleTheme={toggleTheme} />} />
         </Routes>
       </Suspense>
-      <button onClick={toggleTheme}>Cambiar Tema</button>
     </Router>
   )
 }
