@@ -16,12 +16,14 @@ const Login = () => {
     setBody({
       [e.target.name]: e.target.value,
     });
-    console.log(body);
   }
 
   const onSubmit = () => {
     history('/app');
-    console.log(body);
+  }
+
+  const onSubmitForm = () => {
+    history('/registro');
   }
 
   return (
@@ -44,6 +46,7 @@ const Login = () => {
        <Button
          onClick={() => onSubmit()}
        />
+        <a href="#" onClick={() => onSubmitForm()}>Crear Cuenta</a>
 
       </form>
     </div>

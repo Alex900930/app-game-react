@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import './App.css';
 import './css/AppDarkTheme.css';
 import './css/AppLightTheme.css';
+import Form from "./components/Login/components/RegisterForm/Form";
 
 const App = () => {
   const [darkTheme, setDarkTheme] = useState(true);
@@ -31,6 +32,7 @@ const App = () => {
             <Login />
           </div>} />
           <Route path="/app" element={<Layout darkTheme={darkTheme} toggleTheme={toggleTheme} />} />
+          <Route path="/registro" element={<Form darkTheme={darkTheme} toggleTheme={toggleTheme} />} />
         </Routes>
       </Suspense>
     </Router>
