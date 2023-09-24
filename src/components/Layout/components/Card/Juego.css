@@ -7,6 +7,12 @@
     background-color: azure;
     width: 355px;
     height: 200px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.juegoimg:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
 }
 
 @media (max-width: 560px){
