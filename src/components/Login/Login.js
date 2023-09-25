@@ -46,7 +46,7 @@ const Login = () => {
        <Button
          onClick={() => onSubmit()}
        />
-        <a href="#" onClick={() => onSubmitForm()}>Crear Cuenta</a>
+        <a href="/registro" onClick={() => onSubmitForm()}>Crear Cuenta</a>
 
       </form>
     </div>
